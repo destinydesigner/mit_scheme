@@ -1,0 +1,12 @@
+(define (pascal-triangle n m)
+  (if (or (= m 1)
+	  (= n m)
+	  )
+      1
+      (+ (pascal-triangle (- n 1)
+			  (- m 1))
+	 (pascal-triangle (- n 1)
+			  m)
+	 )
+      )
+  )
